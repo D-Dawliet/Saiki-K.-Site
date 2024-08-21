@@ -2,18 +2,20 @@
 
 <html>
     <head>
-        <title>Info</title>
+        <title>About Saiki Kusuo</title>
     </head>
 
     <style>
         body {
-            background-image: url('img/Saiki Background.jpg');
+            background-image: url('img/Saiki Backgrounds.jpg');
             background-size: cover;
-            background-color: rgba(255, 255, 255, 0.7);
+            background-color: rgba(255, 255, 255, 0.84); /* Adjust the opacity in the last value (0.7) */
             background-blend-mode: overlay;
             background-repeat: no-repeat;
+            font-family: 'Cambria';
+            background: linear-gradient(135deg, rgb(255, 230, 240) 0%, rgb(255, 182, 193) 100%);
         }
-        
+
         .back :hover {
             color: black;
             background: rgb(121, 121, 121, 0.5);
@@ -26,53 +28,143 @@
             color: gray;
             text-decoration: none;
         }
-    </style>
+
+        .hovering:hover {
+            background: linear-gradient(135deg, rgb(230, 255, 230) 0%, rgb(152, 251, 152) 100%);
+            outline: none;
+            border-color: #ff69b4;
+            box-shadow: 0 0 0 2px rgba(255, 105, 180, 0.2);
+        }
+
+        .hovering {
+            border-radius: 7px;
+            width: 200px;
+            height: 20px;
+            border-width: 1px;
+        }
+
+        form {
+            margin: 0;
+            padding: 15px;
+            background-color: rgba(255, 192, 203, 0.5);
+            width: 50%;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 50px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        textarea {
+            border-radius: 7px;
+            width: 200px;
+            height: 100px;
+        }
+
+        textarea:hover {
+            background: linear-gradient(135deg, rgb(230, 255, 230) 0%, rgb(152, 251, 152) 100%);
+            outline: none;
+            border-color: #ff69b4;
+            box-shadow: 0 0 0 2px rgba(255, 105, 180, 0.2);
+        }
+
+        label {
+            font-family: 'Cambria';
+            color: transparent;
+            background: linear-gradient(135deg, rgb(30, 53, 253) 0%, rgb(252, 64, 221) 100%);
+            background-clip: text;
+        }
+
+        #check {
+            display: inline;
+            color: transparent;
+            background: linear-gradient(135deg, rgb(30, 53, 253) 0%, rgb(252, 64, 221) 100%);
+            background-clip: text;
+        }
+
+        #by {
+            border-radius: 5px;
+            color: purple;
+            border-color: pink;
+        }
+
+        #submit {
+            border-radius: 10px;
+            background-color: rgb(255, 147, 165);
+            width: 70px;
+            height: 25px;
+            border-width: 1px;
+            font-size: 13px;
+            font-family: sans-serif;
+            cursor: pointer;
+        }
+
+        #submit:active {
+            border-width: 2px;
+            border-color: rgb(253, 106, 131);
+        }
+
+        #submit:hover {
+            border-width: 2px;
+            border-color: rgb(253, 106, 131);
+        }
+
+        #Gender {
+            display: inline;
+            color: transparent;
+            background: linear-gradient(135deg, rgb(30, 53, 253) 0%, rgb(252, 64, 221) 100%);
+            background-clip: text;
+        }
+
+        input[type="checkbox"], input[type="radio"] {
+        accent-color: rgb(152, 251, 152);
+        }
+        </style>
 
     <Body>
         <div class="back">
-            <a href="https://d-dawliet.github.io/Saiki-K.-Site/index.html">←Back</a>
+            <a href="index.html">←Back</a>
         </div>
-        <img width="300px" style="display: block; margin: 0 auto;" src="img/saiki_3.png" alt="">
-        <form align="center" action="">
+        <img width="300px" style="filter: drop-shadow(0 0 10px rgba(240, 108, 174, 0.7)); display: block; margin: -14px auto;" src="img/saiki_3.png" alt="Saiki K.">
+        <form align="center" action="" method="">
             <label for="username">Username:</label>
             <br>
-            <input type="text" name="username" id="username" placeholder="Saiki K.">
+            <input class="hovering" type="text" name="username" id="username" placeholder="Saiki K.">
             <br>
             <label for="email">Email:</label>
             <br>
-            <input type="email" name="email" id="email" placeholder="saiki_kusuo@gmail.com">
+            <input class="hovering" type="email" name="email" id="email" placeholder="saiki_kusuo@gmail.com">
             <br>
             <label for="pwd">Password</label>
             <br>
-            <input type="password" name="password" id="pwd" placeholder="password">
+            <input class="hovering" type="password" name="password" id="pwd" placeholder="password">
             <br>
             <br>
             <textarea name="Description" id="Des" placeholder="Write Your Description...(optional)" cols="21" rows="7"></textarea>
             <br>
-            <input type="checkbox">I accept that Saiki K. is better than Sung Jin Woo
+            <input type="checkbox" name="Agreement" value="Accepted"><p id="check">I accept that Saiki K. is better than Sung Jin Woo</p>
             <br>
-            <input type="radio" name="gender">Male
-            <input type="radio" name="gender">Female
-            <input type="radio" name="gender">Saiki K.
+            <input type="radio" name="gender" value="Male"><p id="Gender">Male</p>
+            <input type="radio" name="gender" value="Female"><p id="Gender">Female</p>
+            <input type="radio" name="gender" value="Saiki K."><p id="Gender">Saiki K.</p>
             <br>
             <label for="by">Year:</label>
             <br>
             <select name="Birth Year" id="by">
-                <option value="">2000</option>
-                <option value="">2001</option>
-                <option value="">2002</option>
-                <option value="">2003</option>
-                <option value="">2004</option>
-                <option value="">2005</option>
-                <option value="">2006</option>
-                <option value="">2007</option>
-                <option value="">2008</option>
-                <option value="">2009</option>
-                <option value="">2010</option>
+                <option value="2000">2000</option>
+                <option value="2001">2001</option>
+                <option value="2002">2002</option>
+                <option value="2003">2003</option>
+                <option value="2004">2004</option>
+                <option value="2005">2005</option>
+                <option value="2006">2006</option>
+                <option value="2007">2007</option>
+                <option value="2008">2008</option>
+                <option value="2009">2009</option>
+                <option value="2010">2010</option>
             </select>
             <br>
             <br>
-            <input type="button" value="Submit">
+            <input id="submit" type="submit" value="Submit">
         </form>
     </Body>
 
